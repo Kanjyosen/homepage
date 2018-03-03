@@ -1,8 +1,11 @@
-<?xml version="1.0" encording="UTF-8"?>
-<title>開局予告</title>
-<date>2018/03/03</date>
-<description>こちらは、市川中洲放送です。6月1日より放送を開始します。</description>
-<url>https://www.youtube.com/watch?v=8e-OimwKpeA</url>
+<?xml version="1.0" encoding="UTF-8" ?>
+<inbcpx>
+<about>
+	<title>開局予告</title>
+	<date>2018/03/03</date>
+	<description>こちらは、市川中洲放送です。6月1日より放送を開始します。</description>
+	<url>https://www.youtube.com/watch?v=8e-OimwKpeA</url>
+</about>
 <programtable>
 	<ttitle>市川中洲放送2018年6月放送予定（2018年3月3日現在予定）</ttitle>
 	<R1>"週","番組名","番組内容","制作","カテゴリ"</R1>
@@ -11,3 +14,4 @@
 	<w3>"2018年6月第3週","MCC茅場町顔合わせ会開催","七夕に行われるMinecraftCodersConferenceの顔合わせ会が関東某所で行われました。","市川中洲放送市川放送センター","首都圏ニュース"</w3>
 	<w4>"2018年6月第4週","放送休止","番組表作成時点で放送する番組がないため放送を休止します。ご了承下さい。",,</w4>
 </programtable>
+</inbcpx>
