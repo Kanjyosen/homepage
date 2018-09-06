@@ -28,8 +28,51 @@
         しかし、ツイッターでも言った通り、まさに<a href="https://twitter.com/0sakaKanjyosen/status/1035126176019181568"></a>「なんでそうnullんですか」</a>の一言で言い表せるような現象が起きてしまっているので、そのへんの修正に時間がかかりそうです。<br>
         とりあえず、そのへんは今月中に終わらせて、さっさとバックアップ機能だけでも動くようにします。<br>
         トレイ格納とか、そのへんもやんなきゃいけないし。じゃ、私はとある書類を書いてきます。<br>
-        
-
+        <h2>2018/09/03</h2>
+        今日は休みにしました。<br>
+        ってか、毎週は月曜日を休みにすることにしました。<br>
+        またあした。<br>
+        <h2>2018/09/04</h2>
+        ちょっと昨日の不具合の修正が難航しすぎてる....<br>
+        今日は目立った進捗はありません。また明日。<br>
+        <h2>2018/09/05</h2>
+                class Abu extends JFrame implements ActionListener{<br>
+                    (中略)<br>
+                    String settingdisplay = new String("");<br>
+                    public static void main(String args[]) {<br>
+                        (中略)<br>
+                    }<br>
+                    Abu(String nothing){<br>
+                        (中略)<br>
+                    }<br>
+                    public void actionPerformed(ActionEvent e){<br>
+                        (中略)<br>
+                        String settingname = JOptionPane.showInputDialog(this, "Please set setting's name.", "Setting " + settingnumber);<br>
+			        	(中略)<br>
+		        		settingname = setname[settingnumber];<br>
+		        		settingdisplay = settingdisplay + "\n" + settingname;<br>
+                        setxt.setText(settingdisplay);<br>
+                    }<br>
+                        <br>
+                    <br>
+                }<br>
+                <br>
+        この部分が関係ありそうなソースなんですが、特に変数系の異常は見当たらないです....<br>
+        ちょっと今日も特になし。<br>
+        <h2>2018/09/06</h2>
+        <b>こらああああああ！私いいいいいいい！なんで代入先と代入元が入れ替わってんだあああ！</b><br>
+        はい。そうだったんです。昨日のソース、異常ありました。<br>
+        <q>settingname = setname[settingnumber];</q><br>
+        これ、<b>順番逆でした。</b><br>
+        つまり、<br>
+        <q>settingname←setname[settingnumber]</q><br>
+        のつもりが、<br>
+        <q>settingname→setname[settingnumber]</q><br>
+        になってたんでありました....<br>
+        これにて「なんでそうnullんですか」現象は解決。<br>
+        ただ、改行が追加されなかったりする現象が起きているのがわかったのでそのへん直したりすんのを次はやる感じです。<br>
+        投稿日なの<s>と猛烈にSimutransやりたいの</s>で時間にしてModるプロジェクトは約90分早上がり。<br>
+        じゃ、Simutransやってきます。<br>
 
     </body>
 </html>
