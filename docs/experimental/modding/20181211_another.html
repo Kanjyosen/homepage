@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../csses/main.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>AutoBackUpのソース</h1>
+        package main;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+class Abu extends JFrame implements ActionListener{
+	JLabel stxt;
+	JPanel settingsmenu;
+	int exitcount = 0;
+	int settingnumber = 0;
+	String setting[] = new String[10];
+	String setname[] = new String[10];
+	String[] errormessage = {"ERR-01 This command isn't made yet.", "ERR-02 Java language's error:", "ERR-03 Cancelled"};
+	String[] javaerrors = {"JFileChooser said error."};
+	JLabel setxt;
+	String settings2 = new String("");
+	String buffer02 = new String("");
+	public static void main(String args[]) {
+		Abu nai = new Abu("nothing");
+		nai.setVisible(true);
+	}
+	Abu(String nothing){
+		setTitle("AutoBackUp");
+		setSize(400, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ImageIcon favicon = new ImageIcon("./visual/abu.png");
+		setIconImage(favicon.getImage());
+		
+		JPanel status = new JPanel();
+		status.setBackground(Color.BLACK);
+		stxt = new JLabel();
+		stxt.setForeground(Color.WHITE);
+		stxt.setText("Welocome, Reserved Staff.");
+		status.add(stxt);
+		
+		JPanel settingsmenu = new JPanel();
+		setxt = new JLabel();
+		
+		
+		settingsmenu.add(setxt, BorderLayout.NORTH);
+		
+		JPanel filebuttons = new JPanel();
+		filebuttons.setBackground(Color.CYAN);
+		JButton set = new JButton("Set File");
+		JButton exit = new JButton("Exit");
+		JButton sink = new JButton("Sink");
+		set.addActionListener(this);
+		set.setActionCommand("set");
+		exit.addActionListener(this);
+		exit.setActionCommand("exit");
+		sink.addActionListener(this);
+		sink.setActionCommand("sink");
+		
+		filebuttons.add(exit, BorderLayout.WEST);
+		filebuttons.add(set, BorderLayout.CENTER);
+		filebuttons.add(sink, BorderLayout.EAST);
+		
+		
+		getContentPane().add(status, BorderLayout.NORTH);
+		getContentPane().add(settingsmenu, BorderLayout.CENTER);
+		getContentPane().add(filebuttons, BorderLayout.SOUTH);
+	}
+	void BackUp(String path){
+		
+	}
+	public void actionPerformed(ActionEvent e) {
+		String command = e.getActionCommand();
+		if(command.equals("set")) {
+		exitcount = 0;
+		if (settingnumber == setting.length) {
+			int answer = JOptionPane.showConfirmDialog(this, "Setting slot is full. Do you remove first setting?", "", 0);
+			System.out.println(answer);
+			settings2 = "";
+			if(answer == 0) {
+				int c = 8;
+				for(c = 9; c >= 1;c--) {
+					System.out.println(c - 1);
+					System.out.println(setting[c - 1]);
+					setting[9 - c] = setting[c];
+					setname[9 - c] = setname[c];
+					System.out.println("Point Alpha is passed.");
+					settings2 = settings2.concat(setname[c].concat("<br>"));
+					
+				}
+				JFileChooser fc = new JFileChooser();
+				int answer1 = fc.showOpenDialog(this);
+				if(answer1 == 1) {
+					stxt.setForeground(Color.RED);
+					stxt.setText(errormessage[2]);
+				}else if(answer1 == -1) {
+					stxt.setForeground(Color.RED);
+					stxt.setText(errormessage[1] + javaerrors[0]);
+				}else {
+					File data  = fc.getSelectedFile();
+					String name = fc.getName(data);
+					String settingname = JOptionPane.showInputDialog(this, "Please set setting's name.", "Setting " + 0);
+					System.out.println(settingname);
+					setting[9] = name;
+					setname[9] = settingname;
+					settings2 = settings2.concat(settingname.concat("<br>"));
+				}
+				setxt.setText("");
+				setxt.setText("<html>" + settings2 + "</html>");
+			}else {
+				System.out.println("Point Beta is passed.");
+				//nothing to program
+			}
+		}else {
+			JFileChooser fc = new JFileChooser();
+			int answer = fc.showOpenDialog(this);
+			if(answer == 1) {
+				stxt.setForeground(Color.RED);
+				stxt.setText(errormessage[2]);
+			}else if(answer == -1) {
+				stxt.setForeground(Color.RED);
+				stxt.setText(errormessage[1] + javaerrors[0]);
+			}else {
+				File data  = fc.getSelectedFile();
+				String name = fc.getName(data);
+				String settingname = JOptionPane.showInputDialog(this, "Please set setting's name.", "Setting " + settingnumber);
+				System.out.println(settingname);
+				setting[settingnumber] = name;
+				setname[settingnumber] = settingname;
+				settings2 = settings2.concat(settingname.concat("<br>"));
+				settingnumber = settingnumber + 1;
+				setxt.setText("<html>" + settings2 + "</html>");
+				//stxt.setText(name);
+			}
+		}
+		}else if(command.equals("exit")) {
+			int answer = JOptionPane.showConfirmDialog(this, "Are you sure to quit?", "", 0);
+			if (answer == 0) {
+				System.exit(0);
+			}else {
+				
+			}
+		
+		}else if(command.equals("sink")) {
+		exitcount = 0;
+		stxt.setForeground(Color.RED);
+		stxt.setText(errormessage[0]);
+		}
+	}	
+}
+	
+
+
+        
+        </body>
+    </html>
