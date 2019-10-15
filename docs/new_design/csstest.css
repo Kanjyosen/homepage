@@ -1,0 +1,17 @@
+
+
+.menuboard {
+  width: 250px;
+  height: 100%;
+  background: #2c4f54;
+  align-items: center;
+}
+
+.menubutton {
+  padding:10px;
+  border-color: inherit;
+  border: 10px;
+  height: auto;
+  width:200px;
+  text-align: center;
+}
