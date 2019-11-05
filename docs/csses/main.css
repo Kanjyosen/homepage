@@ -14,8 +14,7 @@
 #mainpage {
   font-family: 'M PLUS 1p', sans-serif;
   font-family: 'Raleway', sans-serif;
-  margin: 2em;
-  padding: 0em;
+  padding: 2em;
 }
 
 #midashi {
@@ -26,4 +25,13 @@
 
 .a {
   color: #0095d9;
+}
+
+html, body{
+  height: 100%;
+  margin: 0em;
+}
+
+#pagebase{
+  height: 100vh;
 }
