@@ -36,3 +36,26 @@ html, body{
 #pagebase{
   height: 100vh;
 }
+
+#midashi2 {
+  color: #f08300;
+  font-weight: bold;
+  font-size: medium;
+}
+
+#add-title {
+  font-size: x-large;
+}
+/*
+見てもらえれば分かる通り、なぜかZerosaka Diaryを編集しつつマイフェスについて思考をめぐらしている
+ってかリニューアルナウ
+CSSはいいぞ☆
+今自信を持って言えるぞ
+非常に悲しき
+こんにちは、マリファナです？（難聴）
+これ終わったら全部消すから...
+リニューアルついでに独立ページ化してなかったやつ独立ページ化してる
+なんかVSCodeが壊れ始めてカラーコードのとこの四角が変なとこに出てくるようになったから寝る
+うそ
+VSCode落とすだけ
+*/
