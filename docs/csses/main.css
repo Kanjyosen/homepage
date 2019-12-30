@@ -46,6 +46,13 @@ html, body{
 #add-title {
   font-size: x-large;
 }
+
+#topic {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #ff0000;
+}
 /*
 見てもらえれば分かる通り、なぜかZerosaka Diaryを編集しつつマイフェスについて思考をめぐらしている
 ってかリニューアルナウ
