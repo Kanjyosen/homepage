@@ -1,8 +1,28 @@
 #notif01{
-    transform: rotate(7.5deg);
-    text-align: left;
+    transform: rotate(8deg);
+    line-height: 50%;
 }
 #notif02{
     transform: rotate(5deg);
-    text-align: left;
+    line-height: 320%;
+}
+#notif03{
+    transform: rotate(-5deg);
+    line-height: 320%;
+}
+#notif04{
+    transform: rotate(-8deg);
+    line-height: 50%;
+}
+#pictext{
+    position: absolute;
+    width: 67%;
+    top: 25%;
+    left: 0;
+    text-align: right;
+    color: white;
+}
+#backpic{
+    position: relative;
+    width: 800px;
 }

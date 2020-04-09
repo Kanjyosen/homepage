@@ -17,9 +17,25 @@
   padding: 2em;
 }
 
+#pictext a{
+  color: #ffffff;
+  font-weight: bold;
+}
 
 #midashi {
   color: #38b48b;
+  font-weight: bold;
+  font-size: large;
+}
+
+#midashi_notif {
+  color: #824880;
+  font-weight: bold;
+  font-size: large;
+}
+
+#midashi_coyote {
+  color: #956f29;
   font-weight: bold;
   font-size: large;
 }
@@ -34,7 +50,7 @@ html, body{
 }
 
 #pagebase{
-  height: 100vh;
+  /*にっこり*/
 }
 
 #midashi2 {
