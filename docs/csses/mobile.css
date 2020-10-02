@@ -1,0 +1,55 @@
+div.sharebutton {
+  width:100%;
+  background-color:gray;
+  height:300px;
+}
+
+div.tweetbtn {
+  width:25%;
+  background-color:skyblue;
+  height:290px;
+  text-align:center;
+  vertical-align:bottom;
+  float:left;
+  color:black;
+  font-size: 150px;
+}
+
+div.kaomotobtn{
+  width:25%;
+  background-color: midnightblue;
+  height:290px;
+  text-align:center;
+  vertical-align:bottom;
+  float:left;
+  color:white;
+  font-size: 150px;
+}
+
+div.discordbtn {
+  width:25%;
+  background-color:gray;
+  height:290px;
+  text-align:center;
+  vertical-align:bottom;
+  float:left;
+  color:black;
+  font-size: 70px;
+}
+
+div.unknownbtn{
+  width:25%;
+  background-color: limegreen;
+  height:290px;
+  text-align:center;
+  vertical-align:bottom;
+  float:left;
+  color:black;
+  font-size: 150px;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
