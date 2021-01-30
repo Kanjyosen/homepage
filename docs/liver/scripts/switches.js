@@ -28,7 +28,7 @@ abouttt = document.getElementById('aboupic');
 //alert("switches.jsは正常に動作しようとしています。");
 
 pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
-aboupic.innerHTML = abouts[picnum];
+abouttt.innerHTML = abouts[picnum];
 
 }
 
@@ -52,5 +52,5 @@ function prevPic(){
 
 function changePic(){
 	pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
-	aboupic.innerHTML = abouts[picnum];
+	abouttt.innerHTML = abouts[picnum];
 }
