@@ -1,18 +1,14 @@
 #notif01{
-    transform: rotate(8deg);
-    line-height: 50%;
+    line-height: 200%;
 }
 #notif02{
-    transform: rotate(5deg);
-    line-height: 320%;
+    line-height: 200%;
 }
 #notif03{
-    transform: rotate(-5deg);
-    line-height: 320%;
+    line-height: 200%;
 }
 #notif04{
-    transform: rotate(-8deg);
-    line-height: 50%;
+    line-height: 200%;
 }
 #pictext{
     position: absolute;

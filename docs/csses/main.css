@@ -34,12 +34,6 @@
   font-size: large;
 }
 
-#midashi_coyote {
-  color: #956f29;
-  font-weight: bold;
-  font-size: large;
-}
-
 .a {
   color: #0095d9;
 }
@@ -78,16 +72,50 @@ html, body{
 #pancake20201026 {
   display: none;
 }
-/*
-見てもらえれば分かる通り、なぜかZerosaka Diaryを編集しつつマイフェスについて思考をめぐらしている
-ってかリニューアルナウ
-CSSはいいぞ☆
-今自信を持って言えるぞ
-非常に悲しき
-こんにちは、マリファナです？（難聴）
-これ終わったら全部消すから...
-リニューアルついでに独立ページ化してなかったやつ独立ページ化してる
-なんかVSCodeが壊れ始めてカラーコードのとこの四角が変なとこに出てくるようになったから寝る
-うそ
-VSCode落とすだけ
-*/
+
+#nextpic {
+  background-color: darkcyan;
+  color:            aliceblue;
+  font-size:        200%;
+  width:            100%;
+  height:           75px;
+  text-align:       center;
+}
+
+#prevpic {
+  background-color: darkcyan;
+  color:            aliceblue;
+  font-size:        200%;
+  width:            100%;
+  height:           75px;
+  text-align:       center;
+}
+
+#yt-channel {
+  background-color: red;
+  color:            black;
+  font-size:        100%;
+  width:            100%;
+  text-align:       center;
+  border:           2px solid;
+  border-color:     black;
+}
+
+#nc-community {
+  background-color: white;
+  color:            black;
+  font-size:        100%;
+  width:            100%;
+  text-align:       center;
+  border:           2px solid;
+  border-color:     black;
+}
+
+#tw-account {
+  background-color: deepskyblue;
+  color:            black;
+  width:            100%;
+  text-align:       center;
+  border:           2px solid;
+  border-color:     black;
+}
