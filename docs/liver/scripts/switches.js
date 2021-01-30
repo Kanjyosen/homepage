@@ -25,7 +25,7 @@ abouts = [a1, a2, a3, a4];
 pictttt = document.getElementById('piccccc');
 abouttt = document.getElementById('aboupic');
 
-//alert("switches.jsは正常に動作しようとしています。");
+//alert("switches.jsは正常に動作しようとしています。")
 
 pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
 abouttt.innerHTML = abouts[picnum];
