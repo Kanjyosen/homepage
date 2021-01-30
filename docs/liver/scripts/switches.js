@@ -15,11 +15,20 @@ l4 = "https://youtu.be/irnxyUhb6TU";
 
 linkks = [l1, l2, l3, l4];
 
+a1 = "PAPERS,PLEASE配信 2021/02/01 14:00";
+a2 = "EXR-SUV配信 2021/02/01 16:00";
+a3 = "沼鯖建築配信 2021/02/01 18:00";
+a4 = "朝はブレッド 2021/02/01 09:00";
+
+abouts = [a1, a2, a3, a4];
+
 pictttt = document.getElementById('piccccc');
+abouttt = document.getElementById('aboupic');
 
 //alert("switches.jsは正常に動作しようとしています。");
 
 pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
+aboupic.innerHTML = abouts[picnum];
 
 }
 
@@ -43,4 +52,5 @@ function prevPic(){
 
 function changePic(){
 	pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
+	aboupic.innerHTML = abouts[picnum];
 }
