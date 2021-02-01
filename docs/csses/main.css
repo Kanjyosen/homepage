@@ -17,6 +17,12 @@
   padding: 2em;
 }
 
+#mainpageL {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  padding: 0em;
+}
+
 #pictext a{
   color: #ffffff;
   font-weight: bold;
