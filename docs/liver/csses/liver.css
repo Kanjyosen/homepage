@@ -1,0 +1,8 @@
+#class-N {
+  background:       linear-gradient(to right, dodgerblue, mediumvioletred);
+  color:            white;
+  width:            100%;
+  text-align:       center;
+  border:           2px solid;
+  border-color:     black;
+}

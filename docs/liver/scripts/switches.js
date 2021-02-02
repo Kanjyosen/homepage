@@ -1,24 +1,30 @@
 function setUpes(){
 picnum = 0;
 
-p1 = "./images/20210201.png";
-p2 = "./images/20210201_2.png";
-p3 = "./images/20210201_3.png";
-p4 = "./images/20210201_4.jpg";
+p1 = "./images/20210203.png";
+p2 = "./images/b_20210202.png";
+p3 = "./images/now_constructing.png";
+p4 = "./images/now_constructing.png";
+
+//枠に空きがある場合は画像を"./images/now_constructing.png"に設定すること
 
 pictus = [p1, p2, p3, p4];
 
-l1 = "https://youtu.be/d1TltDkKkfo";
-l2 = "https://youtu.be/hWKshm4xY8Y";
-l3 = "https://youtu.be/i0kOw2OC4TA";
-l4 = "https://youtu.be/irnxyUhb6TU";
+l1 = "https://youtu.be/SX4sJUcm02Q";
+l2 = "./blog/20210202.htm";
+l3 = "https://zerosaka.npjp.net/liver/index.html";
+l4 = "https://zerosaka.npjp.net/liver/index.html";
+
+//枠に空きがある場合はURLを"https://zerosaka.npjp.net/liver/index.html"に設定すること
 
 linkks = [l1, l2, l3, l4];
 
-a1 = "PAPERS,PLEASE配信 2021/02/01 14:00";
-a2 = "EXR-SUV配信 2021/02/01 16:00";
-a3 = "沼鯖建築配信 2021/02/01 18:00";
-a4 = "朝はブレッド 2021/02/01 09:30";
+a1 = "PAPERS,PLEASE配信 2021/02/03 11:00";
+a2 = "一日4枠やってみた感想とか反省とか 2021/02/02 BLOG記事";
+a3 = "毎度ご閲覧いただきありがとうございます";
+a4 = "毎度ご閲覧いただきありがとうございます";
+
+//枠に空きがある場合はテキストを"毎度ご閲覧いただきありがとうございます"に設定すること
 
 abouts = [a1, a2, a3, a4];
 
