@@ -1,30 +1,33 @@
 function setUpes(){
 picnum = 0;
 
-p1 = "./images/20210203.png";
+p1 = "./images/20210208.jpg";
 p2 = "./images/b_20210202.png";
-p3 = "./images/20210203_2.png";
+p3 = "./images/20210208_2.png";
 p4 = "./images/now_constructing.png";
 
 //枠に空きがある場合は画像を"./images/now_constructing.png"に設定すること
+//画像設定
 
 pictus = [p1, p2, p3, p4];
 
-l1 = "https://youtu.be/SX4sJUcm02Q";
+l1 = "https://youtu.be/_Owg1ffjIYU";
 l2 = "./blog/20210202.htm";
-l3 = "https://youtu.be/N3RjVM-yZS8";
+l3 = "https://youtu.be/9T_sDX8o7dw";
 l4 = "https://zerosaka.npjp.net/liver/index.html";
 
 //枠に空きがある場合はURLを"https://zerosaka.npjp.net/liver/index.html"に設定すること
+//リンク設定
 
 linkks = [l1, l2, l3, l4];
 
-a1 = "PAPERS,PLEASE配信 2021/02/03 11:00";
+a1 = "間食にもブレッド 2021/02/08 10:30";
 a2 = "一日4枠やってみた感想とか反省とか 2021/02/02 BLOG記事";
-a3 = "ぜろさか・ざ・らいばーのツイートって英語圏の人にはどう見えてるの？ 2021/02/03 15:00";
+a3 = "物理学の実験（流血注意） 2021/02/08 12:30";
 a4 = "毎度ご閲覧いただきありがとうございます";
 
 //枠に空きがある場合はテキストを"毎度ご閲覧いただきありがとうございます"に設定すること
+//説明文設定
 
 abouts = [a1, a2, a3, a4];
 
@@ -32,6 +35,16 @@ pictttt = document.getElementById('piccccc');
 abouttt = document.getElementById('aboupic');
 
 //alert("switches.jsは正常に動作しようとしています。")
+
+c1 = "";
+c2 = "";
+c3 = "この配信は流血表現があることが予測されます。移動しますか？";
+c4 = "";
+
+//特に注意喚起要素がなければ空欄にすること
+//注意喚起
+
+cauti = [c1, c2, c3, c4];
 
 pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
 abouttt.innerHTML = abouts[picnum];
@@ -57,6 +70,19 @@ function prevPic(){
 }
 
 function changePic(){
-	pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
+	if (cauti[picnum] == ""){
+		pictttt.innerHTML = "<a href=\"" + linkks[picnum] + "\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
+	}else{
+		pictttt.innerHTML = "<a href=\"javascript:doCaution()\u003B\"><img src=\"" + pictus[picnum] + "\" width=\"100%\"></a>";
+	}
 	abouttt.innerHTML = abouts[picnum];
+}
+
+function doCaution(){
+	var answer = window.confirm(cauti[picnum]);
+	if (answer == true){
+		document.location.href = linkks[picnum];
+	}else{
+		//ﾅﾆﾓｼﾏｾﾝﾖ?
+	}
 }
