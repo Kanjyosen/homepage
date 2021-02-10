@@ -1,9 +1,9 @@
 function setUpes(){
 picnum = 0;
 
-p1 = "./images/20210208.jpg";
+p1 = "./images/now_constructing.png";
 p2 = "./images/b_20210202.png";
-p3 = "./images/20210208_2.png";
+p3 = "./images/20210213_2.png";
 p4 = "./images/now_constructing.png";
 
 //枠に空きがある場合は画像を"./images/now_constructing.png"に設定すること
@@ -11,9 +11,9 @@ p4 = "./images/now_constructing.png";
 
 pictus = [p1, p2, p3, p4];
 
-l1 = "https://youtu.be/_Owg1ffjIYU";
+l1 = "https://zerosaka.npjp.net/liver/index.html";
 l2 = "./blog/20210202.htm";
-l3 = "https://youtu.be/9T_sDX8o7dw";
+l3 = "./about/20210213.htm";
 l4 = "https://zerosaka.npjp.net/liver/index.html";
 
 //枠に空きがある場合はURLを"https://zerosaka.npjp.net/liver/index.html"に設定すること
@@ -21,9 +21,9 @@ l4 = "https://zerosaka.npjp.net/liver/index.html";
 
 linkks = [l1, l2, l3, l4];
 
-a1 = "間食にもブレッド 2021/02/08 10:30";
+a1 = "毎度ご閲覧いただきありがとうございます";
 a2 = "一日4枠やってみた感想とか反省とか 2021/02/02 BLOG記事";
-a3 = "物理学の実験（流血注意） 2021/02/08 12:30";
+a3 = "バレンタイン前日なので久々のお絵描き 2021/02/13 13:20";
 a4 = "毎度ご閲覧いただきありがとうございます";
 
 //枠に空きがある場合はテキストを"毎度ご閲覧いただきありがとうございます"に設定すること
@@ -38,7 +38,7 @@ abouttt = document.getElementById('aboupic');
 
 c1 = "";
 c2 = "";
-c3 = "この配信は流血表現があることが予測されます。移動しますか？";
+c3 = "";
 c4 = "";
 
 //特に注意喚起要素がなければ空欄にすること
