@@ -1,30 +1,30 @@
 function setUpes(){
 picnum = 0;
 
-p1 = "./images/now_constructing.png";
+p1 = "./images/20210215.png";
 p2 = "./images/b_20210202.png";
-p3 = "./images/20210213_2.png";
-p4 = "./images/now_constructing.png";
+p3 = "./images/20210217_2.png";
+p4 = "./images/20210217.png";
 
 //枠に空きがある場合は画像を"./images/now_constructing.png"に設定すること
 //画像設定
 
 pictus = [p1, p2, p3, p4];
 
-l1 = "https://zerosaka.npjp.net/liver/index.html";
+l1 = "https://youtu.be/pvdqIE_LYJU";
 l2 = "./blog/20210202.htm";
-l3 = "./about/20210213.htm";
-l4 = "https://zerosaka.npjp.net/liver/index.html";
+l3 = "https://youtu.be/O22T16uPtyw";
+l4 = "https://youtu.be/zefU-L9I4uM";
 
 //枠に空きがある場合はURLを"https://zerosaka.npjp.net/liver/index.html"に設定すること
 //リンク設定
 
 linkks = [l1, l2, l3, l4];
 
-a1 = "毎度ご閲覧いただきありがとうございます";
+a1 = "橋を架ける 2021/02/15 12:30 ゲスト：きょうたんさん";
 a2 = "一日4枠やってみた感想とか反省とか 2021/02/02 BLOG記事";
-a3 = "バレンタイン前日なので久々のお絵描き 2021/02/13 13:20";
-a4 = "毎度ご閲覧いただきありがとうございます";
+a3 = "沼鯖配信「橙の政庁、蒼の店舗、裏の馬車。」 2021/02/17 19:10";
+a4 = "世界最速をくらえぬ最速で 2021/02/17 10:30";
 
 //枠に空きがある場合はテキストを"毎度ご閲覧いただきありがとうございます"に設定すること
 //説明文設定
