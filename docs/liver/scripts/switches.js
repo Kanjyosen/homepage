@@ -1,9 +1,9 @@
 function setUpes(){
 picnum = 0;
 
-p1 = "./images/20210224.png";
+p1 = "./images/now_constructing.png";
 p2 = "./images/b_20210202.png";
-p3 = "./images/20210224.png";
+p3 = "./images/now_constructing.png";
 p4 = "./images/now_constructing.png";
 
 //枠に空きがある場合は画像を"./images/now_constructing.png"に設定すること
@@ -11,19 +11,19 @@ p4 = "./images/now_constructing.png";
 
 pictus = [p1, p2, p3, p4];
 
-l1 = "./about/20210224.htm";
+l1 = "https://kanjyosen.github.io/homepage/liver/index.html";
 l2 = "./blog/20210202.htm";
-l3 = "https://youtu.be/HTSiXecf44Q";
-l4 = "https://zerosaka.npjp.net/liver/index.html";
+l3 = "https://kanjyosen.github.io/homepage/liver/index.html";
+l4 = "https://kanjyosen.github.io/homepage/liver/index.html";
 
-//枠に空きがある場合はURLを"https://zerosaka.npjp.net/liver/index.html"に設定すること
+//枠に空きがある場合はURLを"https://kanjyosen.github.io/homepage/liver/index.html"に設定すること
 //リンク設定
 
 linkks = [l1, l2, l3, l4];
 
-a1 = "ぜろさか・ざ・らいばー 2021年度第４四半期活動報告会（ニコニコ生放送） 2021/02/24";
+a1 = "毎度ご閲覧いただきありがとうございます";
 a2 = "一日4枠やってみた感想とか反省とか 2021/02/02 BLOG記事";
-a3 = "ぜろさか・ざ・らいばー 2021年度第４四半期活動報告会（YouTube） 2021/02/25";
+a3 = "毎度ご閲覧いただきありがとうございます";
 a4 = "毎度ご閲覧いただきありがとうございます";
 
 //枠に空きがある場合はテキストを"毎度ご閲覧いただきありがとうございます"に設定すること
