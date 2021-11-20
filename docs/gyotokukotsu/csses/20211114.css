@@ -1,0 +1,9 @@
+#tatepic{
+  width: 25%;
+  float: left;
+}
+#piccol{
+  width: 100%;
+  float: none;
+  position:relative;
+}

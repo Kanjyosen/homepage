@@ -30,3 +30,8 @@
     border-color: #000000;
 }
 /*もんだい　４　の　こたえは　「うめぼし」　だよ*/
+
+#tatepic{
+  width:25%;
+  float:left;
+}

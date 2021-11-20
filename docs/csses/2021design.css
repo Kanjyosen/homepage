@@ -1,0 +1,51 @@
+#leftbar1 {
+  width:30px;
+  height:100%;
+  background:#404040;
+  float:left;
+  position:relative;
+  z-index:1;
+}
+#leftbar2 {
+  width:30px;
+  height:100%;
+  background:#03C1AA;
+  float:left;
+  position:relative;
+  z-index:1;
+}
+#leftmargin {
+  width:30px;
+  height:100%;
+  float:left;
+  position:relative;
+}
+#leftmargin2 {
+  width:20px;
+  height:100%;
+  float:left;
+  position:relative;
+}
+#lightswbtn{
+}
+#leftbars {
+  height:100%;
+  float:left;
+  position:fixed;
+  z-index:1;
+}
+#leftbars2 {
+  height:100%;
+  float:left;
+  position:fixed;
+  z-index:1;
+}
+#Npagebase {
+  margin-left:130px;
+  position:relative;
+  z-index:2;
+}
+#midashi21A {
+  position:relative;
+  z-index:3;
+}

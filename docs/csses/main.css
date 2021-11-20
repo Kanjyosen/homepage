@@ -15,6 +15,9 @@
   font-family: 'M PLUS 1p', sans-serif;
   font-family: 'Raleway', sans-serif;
   padding: 2em;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 #mainpageL {
@@ -50,7 +53,7 @@ html, body{
 }
 
 #pagebase{
-  /*にっこり*/
+ 
 }
 
 #midashi2 {
