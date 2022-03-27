@@ -17,7 +17,6 @@
   padding: 2em;
   height: 100%;
   position: relative;
-  z-index: 1;
 }
 
 #mainpageL {
@@ -82,58 +81,12 @@ html, body{
   display: none;
 }
 
-#nextpic {
-  background-color: darkcyan;
-  color:            aliceblue;
-  font-size:        200%;
-  width:            100%;
-  height:           75px;
-  text-align:       center;
-}
 
-#prevpic {
-  background-color: darkcyan;
-  color:            aliceblue;
-  font-size:        200%;
-  width:            100%;
-  height:           75px;
-  text-align:       center;
+#menu {
+  float:            left;
+  width:            30%;
 }
-
-#aboupic {
-  background-color: indigo;
-  color:            aliceblue;
-  font-size:        200%;
-  width:            100%;
-  height:           75px;
-  text-align:       center;
-}
-
-#yt-channel {
-  background-color: red;
-  color:            black;
-  font-size:        100%;
-  width:            100%;
-  text-align:       center;
-  border:           2px solid;
-  border-color:     black;
-}
-
-#nc-community {
-  background-color: white;
-  color:            black;
-  font-size:        100%;
-  width:            100%;
-  text-align:       center;
-  border:           2px solid;
-  border-color:     black;
-}
-
-#tw-account {
-  background-color: deepskyblue;
-  color:            black;
-  width:            100%;
-  text-align:       center;
-  border:           2px solid;
-  border-color:     black;
+#display {
+  float:            right;
+  width:            70%;
 }
