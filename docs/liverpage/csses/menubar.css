@@ -1,0 +1,16 @@
+#wholemenu{
+ width:    100%;
+ left:     50%;
+}
+
+#menubtn{
+ position: relative;
+ width:    24%;
+ float:    right;
+}
+
+#menutxt{
+ position: absolute;
+ left:     25px;
+ top:      15%;
+}
