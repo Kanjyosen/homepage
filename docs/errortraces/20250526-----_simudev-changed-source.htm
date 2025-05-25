@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta content="text/html; charset=UTF-8">
+
+</head>
+<body>
+<h1>convoi_info_t.ccで変えた場所（とその周囲）</h1>
+略した部分は変更してないです<br>
+<br>
+（前略）<br>
+void convoi_info_t::init(convoihandle_t cnv)<br>
+{<br>
+	this->cnv = cnv;<br>
+	this->mean_convoi_speed = speed_to_kmh(cnv->get_akt_speed()*4);<br>
+	this->max_convoi_speed = speed_to_kmh(cnv->get_min_top_speed()*4);<br>
+	char convoi_info_name_yard[1024] = "";<br>
+	const char *atmark = " @ ";<br>
+	const char *indepd = "independent line";<br>
+	<br>
+	strcat_s(convoi_info_name_yard, sizeof(convoi_info_name_yard), cnv->get_name());<br>
+	strcat_s(convoi_info_name_yard, sizeof(convoi_info_name_yard), atmark);<br>
+	if (cnv->get_line().is_bound()) { strcat_s(convoi_info_name_yard, sizeof(convoi_info_name_yard), cnv->get_line()->get_name()); }<br>
+	else { strcat_s(convoi_info_name_yard, sizeof(convoi_info_name_yard), indepd); }<br>
+	const char* convoi_info_name = convoi_info_name_yard;<br>
+	char dispname[1024] = "";<br>
+	<br>
+	printf_s("convoi_info_name_yard : %s\n", convoi_info_name_yard);<br>
+	printf_s("convoi_info_name : %s\n", convoi_info_name);<br>
+	printf_s("cnv->get_name() : %s\n", cnv->get_name());<br>
+	//strcat(convoi_info_name, cnv->get_name());<br>
+	//GOAL : change window name to (cnv->get_name() + "@" + cnv->get_line()->get_name())<br>
+	//gui_frame_t::set_name(convoi_info_name);<br>
+	//<br>
+<br>
+	//TEST CODE BEGIN<br>
+	for (int i = 0; cnv->get_name()[i] != '\0'; i++) {<br>
+    printf("%02X ", (unsigned char)cnv->get_name()[i]);<br>
+	}<br>
+	//TEST CODE END<br>
+<br>
+	if (cnv->get_line().is_bound()) {<br>
+		//gui_frame_t::set_name(cnv->get_line()->get_name());<br>
+		//tstrncpy(dispname, convoi_info_name, lengthof(dispname));<br>
+		//gui_frame_t::set_name(dispname);<br>
+		gui_frame_t::set_name(convoi_info_name);<br>
+	}<br>
+	else { gui_frame_t::set_name(cnv->get_name()); }<br>
+	//TEST CODE BEGIN<br>
+	//strcpy_s(convoi_info_name_yard, sizeof(convoi_info_name_yard), "TestName @ LineA");<br>
+	gui_frame_t::set_name(convoi_info_name);<br>
+	//gui_frame_t::set_name("(2) H-Trans 木材運搬トラック @ (2) 路線");<br>
+	//TEST CODE END<br>
+	printf_s("gui_frame_t::get_name() : %s\n", gui_frame_t::get_name());<br>
+	//gui_frame_t::set_name(cnv->get_line()->get_name());<br>
+	gui_frame_t::set_owner(cnv->get_owner());<br>
+<br>
+	set_table_layout(1,0);<br>
+<br>
+	input.add_listener(this);<br>
+	reset_cnv_name();<br>
+	add_component(&input);<br>
+<br>
+（後略）<br>
+<br>
+あのあとガチャガチャしてたら何も出なくなりました。どうして<br>
+<img src="scrst_000.png">
