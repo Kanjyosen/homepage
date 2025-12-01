@@ -1,4 +1,4 @@
-console.log('frankfurt VER 20251202 0142');
+console.log('frankfurt VER 20251202 0150');
 
 let points = [];
 
@@ -16,7 +16,7 @@ function reqListener() {
   console.log(this.responseText);
   mapID = 'wakekoh';
   const rawTxt = this.responseText;
-  const rowTxt = rawTxt.split(CR + LF);
+  const rowTxt = rawTxt.split(LF);
   
   for (let i = 0;i < rowTxt.length;i++){
     const colTxt = rowTxt[i].split(',');
