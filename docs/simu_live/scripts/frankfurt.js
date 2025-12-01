@@ -12,6 +12,13 @@ let placeName = '';
 
 function reqListener() {
   console.log(this.responseText);
+  mapID = 'wakekoh';
+  const rawTxt = req.responseText;
+  const rowTxt = rawTxt.split(CR + LF);
+  
+  for (let i = 0;i < rowTxt.length;i++){
+    const colTxt = rowTxt[i].split(',');
+    points.push(colTxt);
 }
 
 const req = new XMLHttpRequest();
@@ -19,12 +26,8 @@ req.addEventListener('load', reqListener);
 req.open('GET', './mapdata/wakekoh.csv');
 req.send();
 
-const rawTxt = req.responseText;
-const rowTxt = rawTxt.split(CR + LF);
 
-for (let i = 0;i < rowTxt.length;i++){
-  const colTxt = rowTxt[i].split(',');
-  points.push(colTxt);
+  
 function pin(event){
   console.log(event.offsetX);
   console.log(event.offsetY);
