@@ -10,6 +10,21 @@ let pinID = '';
 let mapID = '';
 let placeName = '';
 
+function reqListener() {
+  console.log(this.responseText);
+}
+
+const req = new XMLHttpRequest();
+req.addEventListener('load', reqListener);
+req.open('GET', './mapdata/wakekoh.csv');
+req.send();
+
+const rawTxt = req.responseText;
+const rowTxt = rawTxt.split(CR + LF);
+
+for (let i = 0;i < rowTxt.length;i++){
+  const colTxt = rowTxt[i].split(',');
+  points.push(colTxt);
 function pin(event){
   console.log(event.offsetX);
   console.log(event.offsetY);
@@ -31,15 +46,6 @@ function pin(event){
 }
 
 const slot = document.getElementById('cassettePos_fileInput');
-
-function reqListener() {
-  console.log(this.responseText);
-}
-
-const req = new XMLHttpRequest();
-req.addEventListener('load', reqListener);
-req.open('GET', './mapdata/wakekoh.csv');
-req.send();
 
 function readcassette() {
   const reader = new FileReader();
