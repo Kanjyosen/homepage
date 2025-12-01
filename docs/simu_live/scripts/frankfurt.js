@@ -1,3 +1,5 @@
+console.log('frankfurt VER 20251202 0142');
+
 let points = [];
 
 const CR = String.fromCharCode(13);
@@ -13,12 +15,13 @@ let placeName = '';
 function reqListener() {
   console.log(this.responseText);
   mapID = 'wakekoh';
-  const rawTxt = req.responseText;
+  const rawTxt = this.responseText;
   const rowTxt = rawTxt.split(CR + LF);
   
   for (let i = 0;i < rowTxt.length;i++){
     const colTxt = rowTxt[i].split(',');
     points.push(colTxt);
+  }
 }
 
 const req = new XMLHttpRequest();
