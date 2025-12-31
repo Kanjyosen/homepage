@@ -45,6 +45,7 @@ function switchlight(divid){
     var meare = base.innerHTML;
     var sumire = meare.replace("?light=true", "?light=false");
     base.innerHTML = sumire;
+    document.body.style.backgroundColor = '#16160e';
 }
 
 function turnonlight(divid){
@@ -54,4 +55,5 @@ function turnonlight(divid){
     var meare = base.innerHTML;
     sumire = meare.replace("?light=false", "?light=true");
     base.innerHTML = sumire;
+    document.body.style.backgroundColor = '#ffffff';
 }
