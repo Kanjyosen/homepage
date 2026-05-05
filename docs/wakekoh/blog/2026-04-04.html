@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="../../images/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<title>「盛分本線系統スパゲッティ～まずはそのままで～」 - 「まだ続く」盛分交通開発記 - Zerosaka's Drawer</title>
+<link rel="stylesheet" type="text/css" href="../../csses/main.css">
+<link rel="stylesheet" type="text/css" href="csses/2020-06-18.css">
+<link rel="stylesheet" type="text/css" href="../../csses/mobile.css">
+<script src="../../scripts/light_switch.js"></script>
+<script src="../../scripts/timer.js"></script>
+<script src="../../scripts/UserAgent.js"></script>
+<script src="../../scripts/bookmark.js"></script>
+<script></script>
+
+<!--以下OGPの表記-->
+<meta property="og:title" content="盛分本線系統スパゲッティ～まずはそのままで～" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kanjyosen.github.io/homepage/wakekoh/blog/2026-04-04.html" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:site_name" content="" />
+<meta property="og:discription" content="「まだ続く」盛分交通開発記" />
+<meta property="og:image" content="https://kanjyosen.github.io/homepage/images/shortmessage.png" />
+<!--以上OGPの表記-->
+</head>
+<body>
+<div id="pagebase">
+<div id="mainpage">
+<div id="midashi_wakekoh">盛分本線系統スパゲッティ～まずはそのままで～</div>
+<div id="foward"></div>
+<hr>
+「シムトライブカメラ」というものをSimutrans交流会議^cの方々はご存知ですか？<br>
+このホームページが置いてあるGithubリポジトリを覗いていない方々は知らないはずです．というのも，あまり表立って出していないからです．<br>
+簡単に言えば，「地図の各地点をつつくとそこのスクショが見れる」ページです．<br>
+順次追加していきます．たまに覗くと，地点が追加されているかもしれませんね．是非<a href="./../../simu_live/index.html">シムトライブカメラ</a>にふらっと来てみてください．<br>
+<s>ちなみにこのページ，サーバ環境じゃないと動作テストができないのであまり動作をいじる気が起きない...</s><br>
+さて，今日は<b>盛分本線系統の煩雑性</b>について．まずはこの路線図をご覧ください．<br>
+<img src="./images/2026-04-04/linemap-moriwake.png", width=100%><br>
+この地図は，盛分本線が関係する各路線の路線図を<b>一部省略して</b>書き出したものです．（訂正：急行「湖南」号は，ノイエスプラッツ，ノイエスプラッツ・アルタ，北鹿児島を<b>通過</b>します．）<br>
+ええ．省略してこれなんです．殆どの系統がそれなりの本数があり，盛分本線がどれくらい旅客輸送において高い役割を果たしているかがわかるかと思います．<br>
+まず区間は次のとおりです．<br>
+<ul>
+  <li><b>盛分本線</b><br>本線：米子-西盛岡-盛岡<br>大垣貨物駅線：大分→大垣→南大垣→大分</li>
+  <li><b>佐野線</b><br>本線：西盛岡-鷹女-奥佐野<br>和歌山支線：鷹女-和歌山</li>
+  <li><b>藤野線</b><br>奥佐野-藤河</li>
+  <li><b>和府大橋線</b><br>緩行線：鷹女-別府<br>高速線：西盛岡-和歌山湖畔-別府</li>
+  <li><b>盛岡市内線</b><br>盛岡-柏崎</li>
+  <li><b>鹿児島線</b><br>倉敷本町/海老名-御殿場</li>
+</ul>
+この時点でちょっと複雑かもしれませんが，それぞれの種別について軽く解説をば．<br>
+●快速特急「白虎」<br>
+対別府方面輸送の最高種別です．時速160km/hを出すのですが，路線長がかなり長いがために高速線は非電化です．そのため高速気動車の８両編成で運行しています．<br>
+往復にかかる時間：<br>
+速達形：2934<br>
+停車形：2970<br>
+●通勤特急「コミューターライナーうわばみ」<br>
+藤河駅から先，さらに伊勢崎を経て小樽まで足を伸ばす長大列車です．２両編成なのによく頑張るなあ<br>
+往復にかかる時間：<br>
+5238<br>
+●特急「玄武」<br>
+対別府方面輸送の最主流種別です．時速は130km/hですが，すべての列車が２階建て12両編成で運行しています．<br>
+歴史がかなり長く，佐野線和歌山支線と和歌山航路が開通してしばらくたった後に運行開始し，和府大橋が開通するまでは米子と和歌山航路を接続する列車として運行していました．その後，和府大橋が開通してからは対別府輸送の本流として運行しています．<br>
+往復にかかる時間：<br>
+3085<br>
+●特急「青龍」<br>
+玄武号を補完する列車です．実態として準特急のほうが適っているかなと思いますが，他の列車との整合上特急列車として運行しています．こちらは２階建て８両編成で運行しています．<br>
+区間は米子-別府なので，少しシャトル運行に近い形態ですね．また，停車駅に幣原駅が追加されています．<s>バイオマス発電所以外何もない駅</s><br>
+往復にかかる時間：<br>
+2901<br>
+●特急「そうげん」<br>
+玄武号よりも歴史が長い，特急としては最古参級の列車です．<br>
+或る意味，普通の都市間特急と言えるのかもしれません．<br>
+往復にかかる時間：<br>
+2883<br>
+●特急「しんりん」<br>
+確か，そうげんの次に運行開始したのがこの列車だったと思います．そうげん号と並び，運行開始のきっかけが全くわからないほどの古株です．<br>
+地味に盛分本線を全線走破する唯一の特急です．こちらの世界でも本線を走破する特急があまりないのは同じなようですね．なお，この列車は盛分本線を走破した後に少しだけ盛岡市内線を通り，五所川原線へ入っていきます．<br>
+往復にかかる時間：<br>
+2069<br>
+●急行「湖南」<br>
+えーーーーー，変なやつです．鹿児島線の御殿場駅からふらふらと海老名にやってきたあとに西盛岡から佐野線に入り，藤野線の藤河駅まで行く列車です．<br>
+こうなったのには原因があります．鹿児島線は設定当時に混雑が悪化し，佐野線の普通電車は赤字を垂れ流し，藤野線は沿線旅客の乗車機会がないという状況がそれぞれ同時に発生していました．そこで，それを全面的に解決するために設定した結果，こんな変なのができたわけです．<br>
+往復にかかる時間：<br>
+3173<br>
+●通勤快速「姑獲鳥」<br>
+こちらも長大列車です．西盛岡始発で，和府大橋を渡り富士宮からは酒田線に入り，さらに大曲線に入り終着は大曲駅という列車です．<br>
+<img src="./images/2026-04-04/kakocho_linemap.png", width=25%><br>
+さぞかし編成も長いのかといえばそんなことはない．130km/h気動車が<b>たった３両１編成</b>です．<br>
+往復にかかる時間：<br>
+4563<br>
+●快速「朱雀」<br>
+四神優等のトリです．（鳥だけに）<br>
+先程の通勤快速とは始発駅と大まかな経路は同じですが，こちらは富士宮からそのまま北上し西十和田まで行く電車です．<br>
+こいつのおかげで北部線（和府大橋より北の路線のことです）には「準快速」が存在します．<br>
+急行型電車6両編成で運転しています．<br>
+往復にかかる時間：<br>
+3174<br>
+これで主な列車は紹介し終えました．さて，路線図をもう一度見てください．普通列車と各駅停車が存在すると思います．<br>
+定石通り，この普通列車は中距離の近郊電車です．とはいえ，西盛岡までは各駅の停車です．西盛岡を出ると，盛岡，川越市，柏崎の順に停車します．<br>
+この停車駅パターンのうち，西盛岡～盛岡は客レ時代の停車駅，盛岡～柏崎は新規設定の停車駅です．<br>
+盛岡市内線はインターアーバン，つまり都市間路面電車由来なので，近郊電車を運行する場合はこういうやり方を以て設定するほうがいいんじゃないかな，と思います．<br>
+実際，普通列車が存在することで西盛岡～柏崎の「各駅停車は人数が乗らないけど優等がないと対処できない」と米子～西盛岡の「各駅停車を長くしたり往復を短くしないと混んでやってられない」の両方を解決しています．贅沢ですね．<br>
+そういうわけで，また今度．
+<hr>
+</div>
+<hr>
+毎度ありがとうございます．盛分交通１日券は，10080Cで盛分交通線全線が一日乗り放題になる乗車券です．お買い求めは，盛分交通線各駅，ワケコートラベルショップ各店舗，提携各店舗からどうぞ．<br>
+<hr>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="盛分本線系統スパゲッティ～まずはそのままで～ - 「まだ続く」盛分交通開発記" data-url="https://kanjyosen.github.io/homepage/wakekoh/blog/2026-04-01.html" data-hashtags="ZD_Wakekoh" data-related="zerosakamakoto" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--<hr>
+<a href="./shortmessage.html">記事一覧に戻る</a>-->
+<hr>
+<div id=midashi_wakekoh>Consoles</div><br>
+<input type="button" value="Turn Light Off" onClick="switchlight('pagebase');" />
+<input type="button" value="Turn Light On" onClick="turnonlight('pagebase');" />
+
+<footer>
+    <div id="sharebutton">
+    <a href="https://twitter.com/share?text=盛分本線系統スパゲッティ～まずはそのままで～ - 「まだ続く」盛分交通開発記&url=https://kanjyosen.github.io/homepage/wakekoh/blog/2026-04-04.html"><div class="tweetbtn">Tw</div></a>
+    <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fkanjyosen.github.io%2Fwakekoh%2Fblog%2F2026-04-04.html"><div class="unknownbtn">LI</div></a>
+    <a href="shortmessage.html"><div class="discordbtn">Top<br>Page</div></a>
+    </div>
+      </footer>
+      
+</div>
+</div>
+</div>
+</body>
